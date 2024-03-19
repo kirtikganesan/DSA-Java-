@@ -1,17 +1,14 @@
 public class practice{
-    public static int binToDec(int binNum){
-        int myNum=binNum;
-        int decNum=0;
-        int pow=0;
-        while(binNum!=0){
-            int lastDigit=binNum%10;
-            decNum=decNum+(int)(Math.pow(2,pow));
-            pow++;
-            binNum=binNum/10;
+    public static int sumofdigits(int n){
+        int sum=0;
+        while(n!=0){
+            int remainder=n%10;
+            sum=sum+remainder;
+            n=n/10;
         }
-        return decNum;
+        return sum;
     }
     public static void main(String[] args) {
-        System.out.println(binToDec(1111));
+        System.out.println(sumofdigits(456));
     }
 }
